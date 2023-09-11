@@ -3,11 +3,11 @@ import json
 import openai
 
 # Inicialize a API do OpenAI
-openai.api_key = "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"
+openai.api_key = ""
 
 # Defina a função para enviar mensagens ao Telegram
 def send_message(chat_id, text):
-    url = f"https://api.telegram.org/bot1747435346:AAHEo2n5Vfnz7aEijMlz1Meppx5yUs2lmIw/sendMessage?chat_id={chat_id}&text={text}"
+    url = f"https://api.telegram.org/sendMessage?chat_id={chat_id}&text={text}"
     requests.get(url)
 
 # Defina a função principal que será executada ao receber mensagens do Telegram
@@ -29,7 +29,7 @@ def handle_message(update):
     send_message(chat_id, response)
 
 # Defina a URL para receber atualizações do Telegram
-url = "https://api.telegram.org/bot1747435346:AAHEo2n5Vfnz7aEijMlz1Meppx5yUs2lmIw/getUpdates"
+url = "https://api.telegram.org/etUpdates"
 
 # Execute o loop infinito para receber atualizações do Telegram
 def get():
