@@ -1,0 +1,63 @@
+---
+name: "configura_l2tp_server_via_jinja2"
+pack: l2tp_action
+runner_type: "python-script"
+description: "configura l2tp no pop via jinja"
+enabled: true
+entry_point: "Configura_server_l2p-pop.py"
+parameters:
+    pop:
+        type: "string"
+        description: "Pop equipament where will be apply L2tp configutation"
+        required: true
+        position: 0
+    user:
+        type: "string"
+        description: "username"
+        required: true
+        position: 1
+    password:
+        type: "string"
+        description: "Path ssh key"
+        required: true
+        position: 2
+    Path_jinja2:
+        type: "string"
+        description: "Path_jinja2"
+        required: true
+        position: 3
+    SOLUTION:
+        type: "string"
+        description: "Path ssh key"
+        required: true
+        position: 4
+    PROFILE_L2TP_POP:
+        type: "string"
+        description: "Set the ssh port"
+        required: true
+        position: 5
+    SERVICE_ID:
+        type: "string"
+        description: "solutuin type"
+        required: true
+        position: 6
+    PRIVATE_IP_IGN_POP:
+        type: "string"
+        description: "circuit id "
+        required: true
+        position: 7
+    PRIVATE_IP_IGN_CPE:
+        type: "string"
+        description: "private pop ign"
+        required: true
+        position: 8
+    PUBLIC_IP_CUSTOMER_BLOCK:
+        type: "string"
+        description: "private ip cpe"
+        required: true
+        position: 9
+    port:
+        type: "integer"
+        description: "customer block"
+        required: true
+        position: 10

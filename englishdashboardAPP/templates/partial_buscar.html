@@ -1,0 +1,13 @@
+{% load static %}
+
+<head>
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+</head>
+
+<form action="{% url 'buscar' %}">
+    {% csrf_token %}
+    <div>
+        <input type="search" id="format_input" name="buscar" required placeholder="Buscar">
+    </div>
+</form>
+  

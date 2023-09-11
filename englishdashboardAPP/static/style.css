@@ -1,0 +1,48 @@
+.formata li{
+    /* GERA EFEITO GRADIENTE */
+    background: linear-gradient(#FFFFFF, #858585 #000000);
+    display: flex;
+    text-transform: uppercase;
+    padding-right:10px;
+    font-size: 10px;
+    font-weight: bold;
+    
+    
+     /* deixa a borda aredondada  */
+    /* border-top-left-radius: 5px; */
+}
+
+li:hover {
+    color: rgb(255, 0, 30);
+    border: 3px solid #5ebc87;
+    transition: 1s ;
+    /* transform: scale(0.5); */
+    /* transform: rotate(10deg); */
+}
+
+/* Algumas pseudo-classes CSS
+hover, quando o usuário passa o cursor sobre o elemento
+active, quando um elemento está sendo ativado pelo usuário
+A mudar a cor do texto e/ou da borda de um elemento, quando o usuário passar o cursor sobre o mesmo
+A mudar a cor da borda de um elemento, quando o mesmo estiver sendo ativado pelo usuário */
+
+
+/* quando clica no botao de mouse */
+li:active {
+    font-size: 50px;
+    
+}
+
+.test{
+    opacity: 90%;
+    box-shadow: 10px 10px #000000;
+}
+
+/* A criar uma tabela HTML
+A tag table, que representa a tabela
+A tag tr, que representa a linha da tabela
+A tag td, que representa a célula da tabela
+A tag thead, que representa o cabeçalho da tabela
+A tag tbody, que representa o corpo da tabela
+A tag th, que representa a célula do cabeçalho da tabela
+A tag tfoot, que representa o rodapé da tabela */

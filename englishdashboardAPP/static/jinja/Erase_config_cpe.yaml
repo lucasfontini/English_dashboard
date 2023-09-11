@@ -1,0 +1,28 @@
+---
+name: "Erase_default_config_cpe"
+pack: l2tp_action
+runner_type: "python-script"
+description: "Access via ssh cpe and erase default config"
+enabled: true
+entry_point: "Erase_config_cpe.py"
+parameters:
+    cpe:
+        type: "string"
+        description: "cpe where will be apply the actions"
+        required: true
+        position: 0
+    user:
+        type: "string"
+        description: "user"
+        required: true
+        position: 1
+    password:
+        type: "string"
+        description: "password"
+        required: true
+        position: 2
+    port:
+        type: "integer"
+        description: "port"
+        required: true
+        position: 3

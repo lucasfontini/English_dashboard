@@ -1,0 +1,3 @@
+/interface l2tp-server add name=l2tp-{{SERVICE_ID}} user={{SERVICE_ID}}
+/ppp secret add local-address={{PRIVATE_IP_IGN_POP}} name={{SERVICE_ID}} password=1nt3l1gl0b3 profile={{PROFILE_L2TP_POP}} remote-address={{PRIVATE_IP_IGN_CPE}} routes="{{PUBLIC_IP_CUSTOMER_BLOCK}} {{PRIVATE_IP_IGN_CPE}}" service=l2tp
+

@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+
+<div class="">
+    {% include "partial_buscar.html" %}
+</div>
+<div>
+    <table class="">
+        <thead class="">
+            <tr>
+                <th scope="col" class="">
+                    id
+                </th>
+                <th scope="col" class="">
+                    Expression
+                </th>
+                <th scope="col" class="">
+                    Meaning
+                </th>
+                <th scope="col" class="">
+                    Exemple
+                </th>
+                <th scope="col" class="">
+                    Picture
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for expressoes in dados %}
+            <tr class="">
+                <td class="">
+                    <strong> {{ expressoes.id }} </strong>
+                </td>
+                <td class="">
+                    <strong>{{ expressoes.name }}</strong>
+                </td>
+                <td class="">
+                    <strong>{{ expressoes.meaning }}</strong>
+    
+                </td>
+                <td class="">
+                    <strong> {{ expressoes.exemple }}</strong>
+                </td>
+                {% if expressoes.foto %}
+                <td class="">
+                    <a href="{% url 'galeria' expressoes.id %}"><img src="media/{{ expressoes.foto }}" alt="test"
+                            width="100px">
+                    </a>
+    
+                    {% else %}
+                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                    <img src="{% static 'galaxia.jpg' %}" alt="test" width="100px">
+                </td>
+                {% endif%}
+            </tr>
+            {% endfor%}
+        </tbody>
+    </table>
+</div>
+
+
+
+
+{% endblock %}

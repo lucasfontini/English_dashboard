@@ -1,0 +1,63 @@
+---
+name: "Aplly_config_to_cpe"
+pack: config_l2tppop
+runner_type: "python-script"
+description: "configura l2tp no pop via jinja"
+enabled: true
+entry_point: "conf_cpe_jinja.py"
+parameters:
+    cpe:
+        type: "string"
+        description: "cpe where will be apply the actions"
+        required: true
+        position: 0
+    user:
+        type: "string"
+        description: "username"
+        required: true
+        position: 1
+    password:
+        type: "string"
+        description: "password"
+        required: true
+        position: 2
+    port:
+        type: "integer"
+        description: "password"
+        required: true
+        position: 3
+    configuration:
+        type: "string"
+        description: "Config to be aplly to cpe"
+        required: true
+        position: 4
+    server_backup:
+        type: "string"
+        description: "IP server backup template "
+        required: true
+        position: 5
+    path:
+        type: "string"
+        description: "Path to save backup file "
+        required: true
+        position: 6
+    user_destination:
+        type: "string"
+        description: "Backup server user "
+        required: true
+        position: 7
+    pass_destination:
+        type: "string"
+        description: "Backup server pass"
+        required: true
+        position: 8
+    port_host_destination:
+        type: "integer"
+        description: "Backup server port ssh"
+        required: true
+        position: 9
+    service_id:
+        type: "string"
+        description: "service ID"
+        required: true
+        position: 10

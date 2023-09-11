@@ -1,0 +1,38 @@
+---
+name: "Erase_config_cpe_Btest to pop"
+pack: config_l2tppop
+runner_type: "python-script"
+description: "Erase default config on CPE and make a Btest to Pop"
+enabled: true
+entry_point: "btest.py"
+parameters:
+    cpe:
+        type: "string"
+        description: "cpe where will be apply the actions"
+        required: true
+        position: 0
+    user:
+        type: "string"
+        description: "user"
+        required: true
+        position: 1
+    password:
+        type: "string"
+        description: "password"
+        required: true
+        position: 2
+    port:
+        type: "string"
+        description: "port"
+        required: true
+        position: 3
+    ip_pop:
+        type: "integer"
+        description: "port"
+        required: true
+        position: 4
+    service_id:
+        type: "string"
+        description: "port"
+        required: true
+        position: 5

@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+    <title>CHAT</title>
+    <style>
+        .user-message {
+            background-color: #f1f0f0;
+            border-radius: 10px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .chatbot-message {
+            background-color: #838a93;
+            color: #fff;
+            border-radius: 10px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="{% url 'req' %}" method="POST">
+        {% csrf_token %}
+        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" type="text" name="chatinput">
+        <button class="btn btn-success" type="submit">Send message</button>
+    </form>
+
+    {% if message %}
+    <pre style="font-family: monospace;">
+        <div class="chatbot-message">{{ message }}</div>
+    </pre>
+    {% endif %}
+    
+</body>
+</html>
+{% endblock %}

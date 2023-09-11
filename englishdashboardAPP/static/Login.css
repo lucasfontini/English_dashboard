@@ -1,0 +1,27 @@
+
+.ajusta-centraliza{
+    margin-top: 50px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+    text-align: center; 
+}
+
+#botao_submit{
+    justify-content: center;
+    background-color: blueviolet;
+    color: white;
+    margin-top: 10px;
+    border-radius: 5px;
+    border-color: blueviolet;
+    size-adjust: 10px;
+
+}
+
+:hover botao_submit{
+    transition: 1s ;
+    transform: scale(1.1);
+}
+
+
